@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./Compo/Hero";
 import Nav from "./Compo/Nav/Nav";
 import Contact from "./Compo/Contact/Contact";

@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import Workcard from "../../Chip/Workcard";
 import Workcard from "@/app/Chip/Workcard";
 
 const Work = () => {
