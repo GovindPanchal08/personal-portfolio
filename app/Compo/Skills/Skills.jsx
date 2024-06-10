@@ -1,6 +1,7 @@
 import React from "react";
 
-import ProgressBar from "../../chip/ProgressBar";
+// import ProgressBar from "../../chip/ProgressBar";
+import ProgressBar from "@/app/Chip/ProgressBar";
 import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 import {
   SiJavascript,
