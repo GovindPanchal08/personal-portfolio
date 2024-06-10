@@ -1,8 +1,8 @@
+"use client"
 import React, { useEffect, useRef } from "react";
-
-import { FaGithub } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa6";
+// import { FaGithub } from "react-icons/fa";
+// import { FaFacebookF } from "react-icons/fa";
+// import { FaLinkedinIn } from "react-icons/fa6";
 // import { PiInstagramLogoFill } from "react-icons/pi";
 // import { FaPlay } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
@@ -33,14 +33,14 @@ const Hero = () => {
             Frontend Web Developer!
           </span>
           {/* <p className=" pp md:ml-24 ml-[20px] font-serif ">
-            Hii , Im Frontend Developer..
+   s         Hii , Im Frontend Developer..
           </p> */}
-          <i className="icon flex flex-row space-x-3  ml-5 md:ml-24 mt-3 md:mt-5 text-2xl  overflow-hidden ">
+          {/* <i className="icon flex flex-row space-x-3  ml-5 md:ml-24 mt-3 md:mt-5 text-2xl  overflow-hidden ">
             <FaGithub className="cursor-pointer hover:bg-violet-400 hover:rounded-full hover:text-3xl " />
             <FaFacebookF className="cursor-pointer  md:hover:text-3xl  " />
             <FaLinkedinIn className="cursor-pointer hover:text-3xl " />
-            {/* <PiInstagramLogoFill  className="cursor-pointer hover:text-3xl " /> */}
-          </i>
+             <PiInstagramLogoFill  className="cursor-pointer hover:text-3xl " />
+          </i> */}
         </div>
         <div className="right  top-5  flex items-center justify-center ">
           <div
