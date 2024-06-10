@@ -3,8 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { PiInstagramLogoFill } from "react-icons/pi";
-import { FaPlay } from "react-icons/fa";
+// import { PiInstagramLogoFill } from "react-icons/pi";
+// import { FaPlay } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
             <FaGithub className="cursor-pointer hover:bg-violet-400 hover:rounded-full hover:text-3xl " />
             <FaFacebookF className="cursor-pointer  md:hover:text-3xl  " />
             <FaLinkedinIn className="cursor-pointer hover:text-3xl " />
-            <PiInstagramLogoFill  className="cursor-pointer hover:text-3xl " />
+            {/* <PiInstagramLogoFill  className="cursor-pointer hover:text-3xl " /> */}
           </i>
         </div>
         <div className="right  top-5  flex items-center justify-center ">
