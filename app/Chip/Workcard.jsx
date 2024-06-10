@@ -27,7 +27,7 @@ const Workcard = () => {
           <div key={ind} className="works">
             <div className="front rounded-lg h-52 w-64 md:h-72 md:w-96 bg-white text-center cursor-pointer">
               {/* <Image width={10}  height={10} src={img} alt={title} /> */}
-              {/* <img className="img hover:scale-[98%] h-full w-full object-cover  rounded-lg" src={img} alt="" /> */}
+              <img className="img hover:scale-[98%] h-full w-full object-cover  rounded-lg" src={img} alt="" />
               <p className="text-2xl italic">{title}</p>
             </div>
           </div>
