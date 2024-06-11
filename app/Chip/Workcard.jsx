@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
+
 const Work = [
   {
     title: "Youtube Ui Clone",
@@ -19,16 +20,27 @@ const Work = [
     img: "https://abhyudayuniversity.edu.in/wp-content/uploads/2022/09/cropped-BCA-Course-Details.jpeg",
   },
 ];
+
 const Workcard = () => {
   return (
-    <div className=" work flex  text-white h-[100vh] w-[100vw] md:ml-32 ">
-      <div className="work mt-5 grid gap-8 md:gap-11 grid-cols-1 md:grid-cols-3 ">
+    <div className="work flex text-white h-[100vh] w-[100vw] md:ml-32">
+      <div className="work mt-5 grid gap-8 md:gap-11 grid-cols-1 md:grid-cols-3">
         {Work.map(({ title, img }, ind) => (
           <div key={ind} className="works">
-            <div className="front rounded-lg h-52 w-64 md:h-72 md:w-96 bg-white text-center cursor-pointer">
-              {/* <Image width={10}  height={10} src={img} alt={title} /> */}
-              <img className="img hover:scale-[98%] h-full w-full object-cover  rounded-lg" src={img} alt="" />
-              <p className="text-2xl italic">{title}</p>
+            <div className="front rounded-lg h-52 w-64 md:h-72 md:w-96 bg-white text-center cursor-pointer relative overflow-hidden">
+              <div className="hover:scale-[98%] h-full w-full object-cover rounded-lg transition-transform duration-300">
+                <Image
+                  src={img}
+                  alt={title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                  priority
+                />
+              </div>
+              <p className="text-2xl italic absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2">
+                {title}
+              </p>
             </div>
           </div>
         ))}
