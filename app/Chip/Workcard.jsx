@@ -38,7 +38,7 @@ const Workcard = () => {
                   priority
                 />
               </div>
-              <p className="text-2xl italic absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-2">
+              <p className="text-2xl italic absolute bottom-0 left-0 w-full bg-black bg-opacity-65 text-white p-2">
                 {title}
               </p>
             </div>
