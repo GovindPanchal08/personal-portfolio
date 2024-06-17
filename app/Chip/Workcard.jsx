@@ -11,17 +11,17 @@ const Work = [
   {
     title: "Editor using Manoco",
     img: "https://img.freepik.com/free-vector/programmers-concept-with-flat-design_23-2147860985.jpg?t=st=1715862491~exp=1715866091~hmac=bca1ad637b46d4803b59f041daa24843bee18005aa7d5929ea1459ee1b54388c&w=740",
-    link: "https://github.com/GovindPanchal08/Editor-Monaco-ui-reactj",
+    link: "https://github.com/GovindPanchal08/Editor-Monaco-ui-reactjs"
   },
   {
     title: "Memory Game ",
     img: "https://img.freepik.com/free-vector/hand-drawn-memory-game-card_23-2150140069.jpg?size=626&ext=jpg&ga=GA1.1.1252568120.1708439916&semt=ais_user",
-    link:"https://memory-game-g7vpap94o-govindpanchal08s-projects.vercel.app/"
+    link:"https://memory-game-rouge-chi.vercel.app/"
   },
   {
     title: "Static BCA Informative Site",
     img: "https://abhyudayuniversity.edu.in/wp-content/uploads/2022/09/cropped-BCA-Course-Details.jpeg",
-    link:"d h"
+    link:""
   },
 ];
 
