@@ -16,7 +16,7 @@ const Work = [
   {
     title: "Memory Game ",
     img: "https://img.freepik.com/free-vector/hand-drawn-memory-game-card_23-2150140069.jpg?size=626&ext=jpg&ga=GA1.1.1252568120.1708439916&semt=ais_user",
-    link:"ncc"
+    link:"https://memory-game-g7vpap94o-govindpanchal08s-projects.vercel.app/"
   },
   {
     title: "Static BCA Informative Site",
