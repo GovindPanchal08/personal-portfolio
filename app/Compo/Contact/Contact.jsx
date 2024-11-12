@@ -14,7 +14,7 @@ const Contact = () => {
     >
       <div className="mt-4 flex items-center justify-center tracking-tighter text-gray-100">
         <h1 className="text-3xl md:text-5xl mb-1 font-medium">
-          Let's <span className="italic text-orange-300">Connect</span>
+          Let&apos;s <span className="italic text-orange-300">Connect</span>
         </h1>
       </div>
       <div className="flex flex-col items-center justify-center text-gray-400 mt-2 px-4 text-center">

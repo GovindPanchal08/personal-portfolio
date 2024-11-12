@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
         <div className="right flex justify-center md:ml-24 mt-4 md:mt-0">
           <img
-            data-aos="fade-in" 
+            data-aos="fade-in"
             className="image w-[60vw] md:w-[33vw] max-w-xs md:max-w-md object-cover"
             src="https://i.postimg.cc/pTn61Gr1/Untitled-design222-modified.png"
             alt="mine"
@@ -52,11 +52,12 @@ const Hero = () => {
           >
             <h2 className="text-xl md:text-2xl font-semibold mb-2">About Me</h2>
             <p className="text-gray-700 font-medium text-sm md:text-base">
-              I'm a final-year BCA student with intermediate frontend skills and
-              foundational backend knowledge. I've completed 2-4 practice projects
-              focused on responsive interfaces with HTML, CSS, JavaScript, React, and
-              basic server setup using Node.js and Express. I'm eager to gain real-world
-              experience and take on new challenges.
+              I&apos;m a final-year BCA student with intermediate frontend
+              skills and foundational backend knowledge. I&apos;ve completed 2-4
+              practice projects focused on responsive interfaces with HTML, CSS,
+              JavaScript, React, and basic server setup using Node.js and
+              Express. I&apos;m eager to gain real-world experience and take on
+              new challenges.
             </p>
           </div>
         </div>

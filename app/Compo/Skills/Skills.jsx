@@ -4,8 +4,8 @@ const Skills = ({ darkMode }) => {
   useEffect(() => {
     Aos.init({
       once: true,
-      duration:1000,
-      delay:0.5
+      duration: 1000,
+      delay: 0.5,
     });
   }, []);
   return (
@@ -19,7 +19,10 @@ const Skills = ({ darkMode }) => {
       </div>
 
       {/* Content */}
-      <div  data-aos="fade-up" className="flex flex-col md:items-start  md:mt-16 mt-10  mb-5 md:ml-24 ml-4 ">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col md:items-start  md:mt-16 mt-10  mb-5 md:ml-24 ml-4 "
+      >
         <h1 className="text-2xl  sm:text-2xl md:text-4xl tracking-tight border-t-[0.2px] border-b-[0.2px] text-white border-white w-fit px-4 py-1 rounded-md text-center font-medium mb-5">
           Development
         </h1>
