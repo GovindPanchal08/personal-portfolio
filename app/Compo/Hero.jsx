@@ -1,77 +1,66 @@
-import React, { useEffect, useRef } from "react";
-
-import { FaGithub } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { PiInstagramLogoFill } from "react-icons/pi";
-import { FaPlay } from "react-icons/fa";
+import React, { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
 const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
+
   useGSAP(() => {
-    var tl = gsap.timeline();
+    const tl = gsap.timeline();
     tl.fromTo(
       ".left",
-      { opacity: 0, y: -40 },
-      { opacity: 1, y: 40, delay: 0.5, duration: 2 }
+      { opacity: 0, y: -50 },
+      { opacity: 1, y: 0, delay: 1, duration: 2 }
     );
   });
-  const handleHover = (e) => {
-    gsap.to(e.target, { scale: 1, opacity: 0.8, duration: 0.3 });
-  };
-  const handleHoverOut = (e) => {
-    gsap.to(e.target, { scale: 1.1, opacity: 1, duration: 0.3 });
-  };
+
   return (
     <>
-      <div className="main flex items-center ">
-        <div className="left flex  flex-col justify-center  md:w-[50%]">
-          <h1 className=" h11 font-bold md:text-4xl md:ml-24 ml-[20px]  text-3xl ">
+      <div className="main flex  md:mb-0 flex-col md:flex-row items-center md:justify-start">
+        <div className="left flex flex-col justify-center mt-7 md:w-[50%]  md:text-left p-2">
+          <h1 className="text-gray-300 font-mono tracking-wide md:tracking-tight md:text-5xl text-3xl  md:ml-24 ml-4">
             Hello, I&apos;m Hiren Panchal
           </h1>
-          <span className=" web text-yellow-600 text-2xl md:text-3xl font-semibold ml-[20px] md:ml-24  my-1 md:my-2">
-            Frontend Web Developer!
+          <span className="web text-orange-300 tracking-wide md:text-5xl text-3xl font-medium md:ml-24 ml-4 my-2">
+            Web Developer!
           </span>
-          {/* <p className=" pp md:ml-24 ml-[20px] font-serif ">
-            Hii , Im Frontend Developer..
-          </p> */}
-          <i className="icon flex flex-row space-x-3  ml-5 md:ml-24 mt-3 md:mt-5 text-2xl  overflow-hidden ">
-            <FaGithub className="cursor-pointer hover:bg-violet-400 hover:rounded-full hover:text-3xl " />
-            <FaFacebookF className="cursor-pointer  md:hover:text-3xl  " />
-            <FaLinkedinIn className="cursor-pointer hover:text-3xl " />
-            <PiInstagramLogoFill className="cursor-pointer hover:text-3xl " />
-          </i>
-        </div>
-        <div className="right  top-5  flex items-center justify-center ">
           <div
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHoverOut}
-            className="relative w-fit flex items-center "
+            className="resume1 mt-1 md:ml-24 ml-4 w-36 mb-14 md:mb-0 md:w-40 text-2xl md:text-3xl border-2 text-center border-zinc-700/45 p-2 rounded-md cursor-pointer shadow-md shadow-zinc-600/85"
+            onMouseEnter={() => setShowModal(true)}
+            onMouseLeave={() => setTimeout(() => setShowModal(false), 2000)}
           >
-            <img
-              data-aos="fade-up"
-              className="image h-[90%]  w-screen object-cover "
-              src="https://i.postimg.cc/pTn61Gr1/Untitled-design222-modified.png"
-              // src={mine}
-              alt="mine"
-            />
-            <div className="  absolute bottom-10 md:bottom-3 right-8 md:right-4">
-              <div
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-                className=" relative mr-28 cursor-pointer"
-              >
-                <img
-                  className=" w-[135px] md:w-[90px] hidden md:block circle-text"
-                  src="https://ik.imagekit.io/imgkitt/tr:w-400/Full_Stack_Developer2.png?updatedAt=1683134009107"
-                  alt=""
-                />
-                <FaPlay className=" text-black absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]" />
-              </div>
-            </div>
+            About Me
           </div>
         </div>
+        <div className="right flex justify-center md:ml-24 mt-4 md:mt-0">
+          <img
+            data-aos="fade-in" 
+            className="image w-[60vw] md:w-[33vw] max-w-xs md:max-w-md object-cover"
+            src="https://i.postimg.cc/pTn61Gr1/Untitled-design222-modified.png"
+            alt="mine"
+          />
+        </div>
       </div>
+
+      {/* Modal Component */}
+      {showModal && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50 px-4">
+          <div
+            className="bg-white rounded-lg p-4 md:p-6 max-w-xs md:max-w-md w-full text-center shadow-lg relative"
+            onMouseEnter={() => setShowModal(true)}
+            onMouseLeave={() => setShowModal(false)}
+          >
+            <h2 className="text-xl md:text-2xl font-semibold mb-2">About Me</h2>
+            <p className="text-gray-700 font-medium text-sm md:text-base">
+              I'm a final-year BCA student with intermediate frontend skills and
+              foundational backend knowledge. I've completed 2-4 practice projects
+              focused on responsive interfaces with HTML, CSS, JavaScript, React, and
+              basic server setup using Node.js and Express. I'm eager to gain real-world
+              experience and take on new challenges.
+            </p>
+          </div>
+        </div>
+      )}
     </>
   );
 };

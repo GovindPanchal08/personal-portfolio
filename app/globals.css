@@ -1,26 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
 
-
+html,
+body {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
 body {
   background: black;
+  scrollbar-width: thin;
 }
-.nav{
+.nav {
   z-index: 1;
 }
 .main {
-  height: 100%;
+  height: calc(100vh - 80px);
   width: 100%;
   color: white;
 }
 .image {
   width: 70%;
   z-index: -1;
-}
-.WWW{
-  z-index: 1;
 }
 
 @media (max-width: 750px) {
@@ -35,22 +36,19 @@ body {
     object-fit: cover;
     object-position: center;
   }
-  .work {
+  /* .work {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-  }
-  
+  } */
 }
 @media (max-width: 950px) {
-  .work {
+  /* .work {
     display: flex;
     flex-wrap: wrap;
     height: 20%;
-  }
-
-
+  } */
 }
 
 @media (max-width: 600px) {
@@ -66,4 +64,3 @@ body {
     object-position: center;
   }
 }
-

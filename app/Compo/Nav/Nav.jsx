@@ -25,55 +25,30 @@ function Nav() {
   return (
     <>
       <div
-        className={`nav sticky top-0  flex  items-center justify-between   text-white  ${
-          scrollPosition > 0
-            ? `bg-black  `
-            : "bg-transparent"
-        }  `}
+        className="nav  mt-3  flex  items-center justify-between   text-white
+        "
       >
         <Link
           onClick={() => window.scrollTo(0, 0)}
           href="/"
-          className=" flex flex-row  rounded-lg gap-2  items-center text-[30px] font-semibold md:ml-24 ml-[20px]  hover:bg-slate-800"
+          className=" flex italic font-extralight font-serif  flex-row  -tracking-wider rounded-lg gap-2  items-center text-[35px]   md:ml-24 ml-[20px]  hover:text-slate-400 hover:border-b-[0.4px]"
         >
-          Hiren.Dev
+          Hiren
         </Link>
 
-        <div className=" hidden  md:flex text-xl font-semibold items-center gap-8 mr-24 p-4">
+        <div className=" hidden  md:flex text-2xl font-medium tracking-tight items-center gap-8 mr-24 p-4">
           <Link
             onClick={() => window.scrollTo(0, 0)}
             activeClass="active"
             smooth={true}
             spy={true}
             duration={1000}
-            className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
+            className="text-yellow-300 p-2 cursor-pointer rounded  "
             href="/"
           >
             Home
           </Link>
-          <Link
-            onClick={() => window.scrollTo(0, 650)}
-            activeClass="active"
-            to="skills"
-            smooth={true}
-            spy={true}
-            offset={100}
-            duration={1000}
-            delay={1000}
-            className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
-          >
-            Skills
-          </Link>
-          <Link
-            onClick={() => window.scrollTo(0, 1100)}
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
-            to="#work"
-          >
-            Work
-          </Link>
+
           <Link
             activeClass="active"
             offset={-100}
@@ -81,14 +56,20 @@ function Nav() {
             smooth={true}
             spy={true}
             duration={1000}
-            className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
+            className="hover:text-yellow-300 hover:border-b-[1px] border-yellow-300  p-2 cursor-pointer  "
             href="#contact"
           >
             Contact
           </Link>
+          <a
+            className=" hover:border-[1px] border-blue-200 p-1 rounded-lg"
+            href="/Hiren Panchal - Resume (1).pdf"
+          >
+            Get <span className="text-blue-400">Resume</span>
+          </a>
         </div>
 
-        <div onClick={handel} className=" mobile md:hidden h-16 block   ">
+        <div onClick={handel} className=" mobile md:hidden z-20 h-16 block   ">
           {!isopen ? (
             <>
               <h1 className="  text-4xl font-bold m-5 ">
@@ -100,8 +81,7 @@ function Nav() {
                   relative    h-[80vh]  w-[60vw]  mt-[-6%] p-3 text-xl italic space-y-3 font-semibold bg-zinc-950  `}
               >
                 <Link
-                
-                  onClick={() =>  window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo(0, 0)}
                   activeClass="active"
                   smooth={true}
                   spy={true}
@@ -111,30 +91,7 @@ function Nav() {
                 >
                   Home
                 </Link>
-                <Link
-                  onClick={() => window.scrollTo(0, 650)}
-                  activeClass="active"
-                  href="skills"
-                  smooth={true}
-                  spy={true}
-                  offset={100}
-                  duration={1000}
-                  delay={1000}
-                  className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
-                >
-                  Skills
-                </Link>
-                <Link
-                  onClick={() => window.scrollTo(0, 1000)}
-                  activeClass="active"
-                  smooth={true}
-                  spy={true}
-                  duration={1000}
-                  className="hover:bg-yellow-400 hover:text-black p-2 rounded  "
-                  href="#work"
-                >
-                  Work
-                </Link>
+
                 <Link
                   activeClass="active"
                   offset={-100}
@@ -147,6 +104,12 @@ function Nav() {
                 >
                   Contact
                 </Link>
+                <a
+                  className=" hover:border-[1px] border-blue-200 p-1 rounded-lg"
+                  href="/Hiren Panchal - Resume (1).pdf"
+                >
+                  Get <span className="text-blue-400">Resume</span>
+                </a>
               </div>
             </>
           ) : (

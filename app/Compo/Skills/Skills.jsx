@@ -1,64 +1,93 @@
-import React from "react";
-
-// import ProgressBar from "../../chip/ProgressBar";
-import ProgressBar from "@/app/Chip/ProgressBar";
-import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
-import {
-  SiJavascript,
-  SiTailwindcss,
-  SiMongodb,
-  SiExpress,
-} from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-
+import React, { useEffect } from "react";
+import Aos from "aos";
 const Skills = ({ darkMode }) => {
+  useEffect(() => {
+    Aos.init({
+      once: true,
+      duration:1000,
+      delay:0.5
+    });
+  }, []);
   return (
-      <div className=" skill -z-10 overflow-x-hidden overflow-hidden container m-auto  mt-16">
-        {/* heading */}
-        <div data-aos="fade-up" className="relative mb-5 ">
-          <h3 className=" my md:ml-24 ml-8 text-3xl font-black text-gray-400 sm:text-2xl">
-            My Skills
-          </h3>
-          <span className="h-[1.1px] ml-8 md:ml-24 absolute w-[80vw] bg-gray-300 block"></span>
-        </div>
-        {/* content*/}
-        <div className="flex ">
-          <div className=" flex-1 w-full">
-            <p
-              data-aos="fade-up"
-              className=" ml-8 md:ml-24 top-5 text-gray-700 font-medium w-[100%]"
-            >
-              What I Know.
+    <div className="skill h-[80vh]  md:h-full bg-zinc-900 overflow-x-hidden overflow-hidden container mx-auto px-4">
+      {/* Heading */}
+      <div className="mt-14 flex gap-1 md:ml-24 ml-4  items-center">
+        <span className="h-[1.5px] bg-white w-[15px]"></span>
+        <h3 className="text-5xl font-serif tracking-tight text-gray-100 sm:text-[45px] lg:text-[65px]">
+          Tech Stack
+        </h3>
+      </div>
+
+      {/* Content */}
+      <div  data-aos="fade-up" className="flex flex-col md:items-start  md:mt-16 mt-10  mb-5 md:ml-24 ml-4 ">
+        <h1 className="text-2xl  sm:text-2xl md:text-4xl tracking-tight border-t-[0.2px] border-b-[0.2px] text-white border-white w-fit px-4 py-1 rounded-md text-center font-medium mb-5">
+          Development
+        </h1>
+        <div className="flex flex-col  gap-5 items-center  md:items-start mt-5 h-auto w-full md:h-[60vh]">
+          <div className="frontend bg-zinc-300 p-4 sm:p-7 md:p-10 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-7 rounded-2xl w-full md:w-auto">
+            <p className="flex justify-center items-center">
+              <img
+                className="w-[13vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/html.png"
+                alt="HTML"
+              />
             </p>
-            {/* left box */}
-            <div
-              data-aos="zoom-in"
-              className="skillss  ml-0 md:ml-0 progress flex items-center h-[100%] w-[100%]  justify-center"
-            >
-              <div className=" text-white flex flex-col gap-6    my-5 w-[80vw] md:w-[65%]">
-                <ProgressBar logo={<IoLogoHtml5 />} name={"HTML"} value={95} />
-                <ProgressBar logo={<IoLogoCss3 />} name={"CSS"} value={75} />
-                <ProgressBar
-                  logo={<SiJavascript />}
-                  name={"Javascript"}
-                  value={70}
-                />
-                <ProgressBar logo={<FaReact />} name={"React Js"} value={70} />
-                <ProgressBar
-                  logo={<SiTailwindcss />}
-                  name={"Tailwind CSS"}
-                  value={50}
-                />
-              </div>
-            </div>
+            <p className="flex justify-center items-center">
+              <img
+                className="w-[13vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/css-3.png"
+                alt="CSS"
+              />
+            </p>
+            <p className="flex justify-center items-center">
+              <img
+                className="w-[13vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/js.png"
+                alt="JavaScript"
+              />
+            </p>
+            <p className="flex justify-center items-center">
+              <img
+                className="w-[13vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/science.png"
+                alt="Science"
+              />
+            </p>
+            <p className="flex justify-center items-center">
+              <img
+                className="w-[13vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/icons8-tailwind-css-48.png"
+                alt="Tailwind CSS"
+              />
+            </p>
           </div>
+
+          <div className="frontend bg-zinc-300 p-5 sm:p-7 md:p-10 flex gap-5 md:gap-7 rounded-2xl w-full md:w-auto">
+            <p className="flex items-center">
+              <img
+                className="w-[15vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/nodejs.png"
+                alt="Node.js"
+              />
+            </p>
+            <p className="flex items-center">
+              <img
+                className="w-[15vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images/mongodb-original-wordmark.1008x1024.png"
+                alt="MongoDB"
+              />
+            </p>
+            <p className="flex items-center">
+              <img
+                className="w-[15vw] sm:w-[15vw] md:w-[6vw] lg:w-[4vw]"
+                src="images\github.png"
+                alt="GitHub"
+              />
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    
-   
-
-
-   
   );
 };
 

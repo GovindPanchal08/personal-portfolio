@@ -1,68 +1,57 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css"; // Import AOS styles
+import AOS from "aos";
 
 const Contact = () => {
-  const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    AOS.init({ duration: 1200, delay: 1, debounceDelay: 1, once: true });
+  }, []);
 
-    emailjs
-      .sendForm("service_qwks0gf", "template_j3vjo9m", form.current, {
-        publicKey: "NAALjJSa799F1BetI",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-              e.target.reset()
-         alert('Email Sent')
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
   return (
-    <div className=" mt-[130%]   md:mt-[0%]   h-full">
-      <div className="mt-10 relative ml-8 md:ml-24 text-gray-400">
-        <h1 className="text-2xl font-semibold">Contact</h1>
-        <span className=" absolute h-[1.1px] w-[85vw] bg-gray-300"></span>
+    <div
+      data-aos="fade-up"
+      className="md:mt-0 z-10 border-t-2 border-zinc-700 text-white bg-zinc-900 pt-5 rounded-t-[10%] h-[35vh] md:h-[40vh]"
+    >
+      <div className="mt-4 flex items-center justify-center tracking-tighter text-gray-100">
+        <h1 className="text-3xl md:text-5xl mb-1 font-medium">
+          Let's <span className="italic text-orange-300">Connect</span>
+        </h1>
       </div>
-      <div className="flex  flex-col md:flex-row items-center justify-between mt-[5%]">
-        <div className="text-white mr-5 md:h-[100%] mt-5 md:w-[50%] flex  flex-wrap flex-col items-center justify-center ">
-          <h1 className="text-4xl font-bold">You Need.</h1>
-          <p className="md:text-base md:ml-20 ml-10 text-sm">
-            Beautiful design for your website.
-          </p>
-          <p className="text-basen mr-14 ">leave a request.</p>
-        </div>
-        <div className="  text-white h-[100%] mt-5   md:w-[50%] flex  md:flex-col items-center justify-center ">
-          <form
-           onSubmit={sendEmail}
-            ref={form}
-            className="flex text-black items-center justify-center flex-col gap-6 w-[80%] bg-slate-50/10 p-4 rounded-xl "
-          >
-            <input
-              className=" w-[60vw] md:w-[24vw] p-2 h-9 rounded-lg "
-              type="email"
-              name="your_email"
-              placeholder="e.g example@gmail.com"
+      <div className="flex flex-col items-center justify-center text-gray-400 mt-2 px-4 text-center">
+        <h2 className="text-2xl md:text-4xl tracking-tight">
+          Get In Touch With Me <span className="text-red-300">Via</span>.
+        </h2>
+        <div className="mt-7 flex gap-5">
+          <button className="hover:scale-110 transition-transform">
+            <a href="https://www.linkedin.com/in/hiren-panchal-042987252/">
+              <img
+                className="w-8 md:w-10"
+                src="images/linkedin.png"
+                alt="LinkedIn"
+              />
+            </a>
+          </button>
+          <button className="hover:scale-110 transition-transform">
+            <img
+              className="w-8 md:w-10"
+              src="images/instagram.png"
+              alt="Instagram"
             />
-            <input
-              className=" w-[60vw] md:w-[24vw] h-9 p-2 rounded-lg"
-              type="name"
-              name="your_name"
-              placeholder="e.g name surname"
-            />
-            <textarea
-              className=" w-[60vw]  md:w-[24vw] p-2 rounded-lg"
-              rows="5"
-              name="message"
-              placeholder="write your message "
-            ></textarea>
-            <button className=" bg-white text-black w-[70vw]  md:w-[24vw] p-2 rounded-lg text-xl font-bold">
-              Send
-            </button>
-          </form>
+          </button>
+          <button className="hover:scale-110 transition-transform">
+            <a href="https://mail.google.com/mail/u/1/#inbox">
+              <img className="w-8 md:w-10" src="images/gmail.png" alt="Gmail" />
+            </a>
+          </button>
+          <button className="hover:scale-110 transition-transform">
+            <a href="https://github.com/GovindPanchal08/">
+              <img
+                className="w-8 md:w-10 bg-white rounded-full "
+                src="images\github.png"
+                alt="Gmail"
+              />
+            </a>
+          </button>
         </div>
       </div>
     </div>

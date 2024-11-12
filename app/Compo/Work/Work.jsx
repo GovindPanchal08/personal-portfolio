@@ -3,24 +3,18 @@ import Workcard from "@/app/Chip/Workcard";
 
 const Work = () => {
   return (
-    <div className="WWW mt-10 ">
-        <div data-aos="fade-up" className="relative mb-5 ">
-          <h3 className=" my md:ml-24 ml-8 text-3xl font-black text-gray-400 sm:text-2xl">
-            Works
-          </h3>
-          <span className="h-[1.1px] ml-8 md:ml-24 absolute w-[85vw] bg-gray-300 block"></span>
-        </div>
-        <p
-          data-aos="fade-up"
-          className="  mt-5 ml-8 md:ml-24 text-gray-700 font-medium"
-        >
-          What I Work.
-        </p>
-           <div className="flex flex-wrap ">
-               <Workcard/>
-           </div>
+    <div className="WWW mt-10 px-4 mb-10">
+      <div className="relative mb-5 md:ml-24  ml-4 flex gap-1">
+        <span className=" h-[1.5px] text-white bg-white w-[15px] flex mt-5"></span>
+        <h3 className="mb-2 text-5xl font-serif tracking-tight text-gray-100 sm:text-[65px]">
+          Work Showcase
+        </h3>
       </div>
-  
+
+      <div className="flex flex-wrap justify-center">
+        <Workcard />
+      </div>
+    </div>
   );
 };
 

@@ -5,15 +5,13 @@ import Nav from "./Compo/Nav/Nav";
 import Contact from "./Compo/Contact/Contact";
 import Skills from "./Compo/Skills/Skills";
 import Work from "./Compo/Work/Work";
-import Resume from "./Compo/Resume";
 const page = () => {
   return (
-    <div>
+    <div className="font-mono">
       <Nav />
       <Hero />
       <Skills />
       <Work />
-      <Resume />
       <Contact/>
     </div>
   );
