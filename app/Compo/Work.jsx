@@ -1,5 +1,6 @@
 import React from "react";
 import { X, ExternalLink } from "lucide-react";
+import Image from "next/image";
 const Work = ({ showWorks, setShowWorks }) => {
   const works = [
     {
@@ -62,9 +63,10 @@ const Work = ({ showWorks, setShowWorks }) => {
                   className="group bg-zinc-800/50 rounded-2xl overflow-hidden border border-zinc-700/50 hover:border-orange-400/50 transition-all duration-300"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={work.image}
                       alt={work.title}
+                      fill
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>

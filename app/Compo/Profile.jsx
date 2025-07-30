@@ -2,17 +2,19 @@ import React from "react";
 import { Code } from "lucide-react";
 import DecryptedText from "../UI/DecryptedText";
 import RotatingText from "../UI/RotatingText";
+import Image from "next/image";
 
 const Profile = () => {
   return (
     <>
       <div className="mb-12">
         <div className="relative inline-block mb-8">
-          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl">
-            <img
+          <div className="w-28 h-28 md:w-36 md:h-36 mx-auto rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl">
+            <Image
               src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Hiren Panchal"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover rounded-full  w-full h-full"
             />
           </div>
           <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-4 border-black animate-pulse"></div>

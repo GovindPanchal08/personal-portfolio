@@ -10,6 +10,9 @@ module.exports = {
       "snappify.com",
       "3.imimg.com",
       "www.shutterstock.com",
+      "images.pexels.com",
+      "www.proofhub.com",
+      "cloud.educaplay.com",
     ],
   },
 };
