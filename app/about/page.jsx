@@ -34,11 +34,11 @@ export default function AboutPage() {
               </p>
 
               <p className="text-[15px] sm:text-[16px] text-muted leading-relaxed font-sans">
-                With a BCA background, my journey started with curious curiosity about how pixels and databases connect. Over the past couple of years, I've moved from crafting frontend prototypes to engineering full-stack systems — real-time WebSocket tools, collaboration suites, and REST APIs.
+                With a BCA background, my journey started with curious curiosity about how pixels and databases connect. Over the past couple of years, I&apos;ve moved from crafting frontend prototypes to engineering full-stack systems — real-time WebSocket tools, collaboration suites, and REST APIs.
               </p>
 
               <p className="text-[15px] sm:text-[16px] text-muted leading-relaxed font-sans">
-                Together with close peers, I've freelanced on client projects, shipping real websites and web products. Working with client feedback, deployment pipelines, and hard deadlines is where my genuine problem-solving was honed.
+                Together with close peers, I&apos;ve freelanced on client projects, shipping real websites and web products. Working with client feedback, deployment pipelines, and hard deadlines is where my genuine problem-solving was honed.
               </p>
 
               {/* Working Philosophy */}

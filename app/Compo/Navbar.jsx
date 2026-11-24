@@ -74,7 +74,9 @@ const Navbar = ({ insideBox = false }) => {
           />
         )}
 
-        <div className={`relative ${insideBox ? "w-full" : "max-w-container mx-auto px-5 sm:px-6 lg:px-10"} flex items-center justify-between`}>
+        <div
+          className={`relative ${insideBox ? "w-full" : "max-w-container mx-auto px-5 sm:px-6 lg:px-10"} flex items-center justify-between`}
+        >
           {/* ── Logo ── */}
           <Link
             href="/"
@@ -100,7 +102,8 @@ const Navbar = ({ insideBox = false }) => {
                 background: "rgba(255, 255, 255, 0.65)",
                 backdropFilter: "blur(12px)",
                 WebkitBackdropFilter: "blur(12px)",
-                boxShadow: "0 1px 10px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.5)",
+                boxShadow:
+                  "0 1px 10px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.5)",
               }}
             >
               {NAV_LINKS.map((link) => {
@@ -162,7 +165,9 @@ const Navbar = ({ insideBox = false }) => {
             />
             <span
               className={`block h-[1.5px] bg-ink/80 transition-all duration-300 origin-center ${
-                isMenuOpen ? "w-5 -rotate-45 -translate-y-[3.5px]" : "w-4 self-end"
+                isMenuOpen
+                  ? "w-5 -rotate-45 -translate-y-[3.5px]"
+                  : "w-4 self-end"
               }`}
             />
           </button>
@@ -201,7 +206,9 @@ const Navbar = ({ insideBox = false }) => {
         >
           Home
           {pathname === "/" && (
-            <span className="ml-2 text-[8px] text-lavender font-bold align-middle">●</span>
+            <span className="ml-2 text-[8px] text-lavender font-bold align-middle">
+              ●
+            </span>
           )}
         </Link>
 
@@ -223,7 +230,9 @@ const Navbar = ({ insideBox = false }) => {
             >
               {link.label}
               {isActive && (
-                <span className="ml-2 text-[8px] text-lavender font-bold align-middle">●</span>
+                <span className="ml-2 text-[8px] text-lavender font-bold align-middle">
+                  ●
+                </span>
               )}
             </Link>
           );

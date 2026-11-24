@@ -31,7 +31,10 @@ const HeroSection = () => {
       className="relative w-full min-h-screen flex items-center justify-center p-3 sm:p-4 lg:p-6"
       aria-label="Hero section"
     >
-      <div className="hero-container bg-grain relative w-full max-w-container mx-auto rounded-[28px] overflow-hidden">
+      <div
+        className="hero-container bg-grain relative w-full max-w-container mx-auto rounded-[28px]"
+        style={{ overflow: "clip" }}
+      >
         <div className="bg-radial-glow absolute inset-0 pointer-events-none z-0" />
         <Navbar insideBox={true} />
 
