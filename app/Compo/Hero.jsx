@@ -6,7 +6,6 @@ import Skills from "./Skills";
 import Social from "./Social";
 import Profile from "./Profile";
 import ActionBtn from "./ActionBtn";
-import Ambient from "../Utils/Ambient";
 
 const Hero = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -18,11 +17,11 @@ const Hero = () => {
     // Welcome animation sequence
     const timer1 = setTimeout(() => {
       setShowWelcome(false);
-    }, 2000);
+    }, 1800);
 
     const timer2 = setTimeout(() => {
       setIsVisible(true);
-    }, 2500);
+    }, 2200);
 
     return () => {
       clearTimeout(timer1);
@@ -30,20 +29,45 @@ const Hero = () => {
     };
   }, []);
 
-  // Welcome Animation Component
+  // Welcome screen — simple, clean fade
   if (showWelcome) {
     return (
-      <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
-        <div className="text-center">
-          <div className="animate-pulse">
-            <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent mb-4">
-              Welcome
-            </h1>
-            <div className="flex items-center justify-center gap-3">
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-bounce"></div>
-              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce delay-100"></div>
-              <div className="w-2 h-2 bg-red-400 rounded-full animate-bounce delay-200"></div>
-            </div>
+      <div
+        className="fixed inset-0 flex items-center justify-center z-50"
+        style={{ backgroundColor: "var(--color-bg)" }}
+      >
+        <div className="text-center" style={{ animation: "fadeInUp 0.6s ease-out forwards" }}>
+          <h1
+            className="text-5xl md:text-6xl"
+            style={{
+              fontFamily: "var(--font-heading)",
+              color: "var(--color-text)",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Hiren Panchal
+          </h1>
+          <div
+            className="mt-4 flex items-center justify-center gap-2"
+          >
+            <span
+              className="block w-8 h-px"
+              style={{ backgroundColor: "var(--color-accent)" }}
+            />
+            <span
+              className="text-sm tracking-widest uppercase"
+              style={{
+                color: "var(--color-text-muted)",
+                fontFamily: "var(--font-body)",
+                fontWeight: 500,
+              }}
+            >
+              Portfolio
+            </span>
+            <span
+              className="block w-8 h-px"
+              style={{ backgroundColor: "var(--color-accent)" }}
+            />
           </div>
         </div>
       </div>
@@ -51,12 +75,17 @@ const Hero = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      <Ambient />
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:px-8 min-h-screen flex items-center justify-center">
+    <div
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: "var(--color-bg)" }}
+    >
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 py-20 lg:px-8 min-h-screen flex items-center justify-center"
+        style={{ maxWidth: "var(--max-width)", margin: "0 auto" }}
+      >
         <div
-          className={`max-w-4xl mx-auto text-center transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          className={`w-full max-w-3xl mx-auto text-center transition-all duration-700 transform ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
           <Profile />
@@ -65,6 +94,8 @@ const Hero = () => {
           <Social />
         </div>
       </div>
+
+      {/* Modals */}
       <About showAbout={showAbout} setShowAbout={setShowAbout} />
       <Work showWorks={showWorks} setShowWorks={setShowWorks} />
     </div>

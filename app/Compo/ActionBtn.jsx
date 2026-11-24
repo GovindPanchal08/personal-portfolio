@@ -1,43 +1,93 @@
 import React from "react";
 import { ArrowRight, Briefcase, Download, User } from "lucide-react";
 
+const btnBase = {
+  fontFamily: "var(--font-body)",
+  fontWeight: 500,
+  borderRadius: "var(--radius)",
+  fontSize: "15px",
+  transition: "all 0.2s ease",
+};
+
 const ActionBtn = ({ setShowAbout, setShowWorks }) => {
   return (
-    <>
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        <button
-          onClick={() => setShowAbout(true)}
-          className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-2xl font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25"
-        >
-          <span className="relative z-10 flex items-center gap-2">
-            <User className="w-5 h-5" />
-            About Me
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </span>
-        </button>
+    <nav aria-label="Quick actions" className="flex flex-wrap justify-center gap-3 mb-12">
+      {/* Primary — About Me */}
+      <button
+        onClick={() => setShowAbout(true)}
+        className="group px-6 py-3 flex items-center gap-2"
+        style={{
+          ...btnBase,
+          backgroundColor: "var(--color-accent)",
+          color: "#fff",
+          border: "none",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "var(--color-accent-hover)";
+          e.currentTarget.style.transform = "translateY(-1px)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "var(--color-accent)";
+          e.currentTarget.style.transform = "translateY(0)";
+        }}
+      >
+        <User className="w-4 h-4" />
+        About Me
+        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+      </button>
 
-        <button
-          onClick={() => setShowWorks(true)}
-          className="group relative px-8 py-4 bg-zinc-900/80 backdrop-blur-sm border-2 border-zinc-700 text-zinc-300 rounded-2xl font-medium transition-all duration-300 hover:border-orange-400 hover:text-orange-400 hover:bg-zinc-800/50"
-        >
-          <span className="flex items-center gap-2">
-            <Briefcase className="w-5 h-5" />
-            View Works
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </span>
-        </button>
+      {/* Secondary — View Works */}
+      <button
+        onClick={() => setShowWorks(true)}
+        className="group px-6 py-3 flex items-center gap-2"
+        style={{
+          ...btnBase,
+          backgroundColor: "transparent",
+          color: "var(--color-text)",
+          border: "1px solid var(--color-border)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.borderColor = "var(--color-accent)";
+          e.currentTarget.style.color = "var(--color-accent)";
+          e.currentTarget.style.transform = "translateY(-1px)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.borderColor = "var(--color-border)";
+          e.currentTarget.style.color = "var(--color-text)";
+          e.currentTarget.style.transform = "translateY(0)";
+        }}
+      >
+        <Briefcase className="w-4 h-4" />
+        View Works
+        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+      </button>
 
-        <a
-          href="/Hiren Panchal - Resume.pdf"
-          className="group px-8 py-4 border-2 border-zinc-700 text-zinc-300 rounded-2xl font-medium transition-all duration-300 hover:border-orange-400 hover:text-orange-400 hover:bg-zinc-900/50"
-        >
-          <span className="flex items-center gap-2">
-            <Download className="w-5 h-5" />
-            Resume
-          </span>
-        </a>
-      </div>
-    </>
+      {/* Tertiary — Resume */}
+      <a
+        href="/Hiren_Panchal_Resume.pdf"
+        className="group px-6 py-3 flex items-center gap-2"
+        style={{
+          ...btnBase,
+          backgroundColor: "transparent",
+          color: "var(--color-text)",
+          border: "1px solid var(--color-border)",
+          textDecoration: "none",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.borderColor = "var(--color-accent)";
+          e.currentTarget.style.color = "var(--color-accent)";
+          e.currentTarget.style.transform = "translateY(-1px)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.borderColor = "var(--color-border)";
+          e.currentTarget.style.color = "var(--color-text)";
+          e.currentTarget.style.transform = "translateY(0)";
+        }}
+      >
+        <Download className="w-4 h-4" />
+        Resume
+      </a>
+    </nav>
   );
 };
 

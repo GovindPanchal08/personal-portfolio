@@ -6,63 +6,96 @@ import Image from "next/image";
 
 const Profile = () => {
   return (
-    <>
-      <div className="mb-12">
-        <div className="relative inline-block mb-8">
-          <div className="w-28 h-28 md:w-36 md:h-36 mx-auto rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl">
-            <Image
-              src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Hiren Panchal"
-              fill
-              className="object-cover rounded-full  w-full h-full"
-            />
-          </div>
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-4 border-black animate-pulse"></div>
+    <section aria-label="Introduction" className="mb-12">
+      {/* Avatar */}
+      <div className="relative inline-block mb-8">
+        <div
+          className="w-28 h-28 md:w-32 md:h-32 mx-auto rounded-full overflow-hidden"
+          style={{
+            border: "3px solid var(--color-border)",
+          }}
+        >
+          <Image
+            src="https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Photo of Hiren Panchal"
+            fill
+            className="object-cover rounded-full w-full h-full"
+          />
         </div>
-
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            <div>
-              <DecryptedText
-                text="Hiren Panchal"
-                speed={100}
-                maxIterations={20}
-                characters="HiReNpAnChAl"
-                animateOn="view"
-                revealDirection="center"
-              />
-            </div>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Code className="w-6 h-6 text-orange-400" />
-            <RotatingText
-              texts={[
-                "Full Stack Developer",
-                "Backend Developer",
-                "FrontEnd Developer",
-                "Web Developer",
-              ]}
-              mainClassName="px-2 sm:px-2 md:px-3 text-2xl md:text-3xl font-semibold text-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-orange-200  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-              transition={{ type: "spring", damping: 10, stiffness: 100 }}
-              rotationInterval={3000}
-            />
-          </div>
-
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-            Passionate web developer crafting responsive, user-focused
-            experiences. Specialized in modern JavaScript and full-stack
-            development. Freelancing with a focus on clean code and seamless UI.
-          </p>
+        {/* Available indicator */}
+        <div
+          className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center"
+          style={{
+            backgroundColor: "var(--color-bg)",
+          }}
+        >
+          <div
+            className="w-4 h-4 rounded-full"
+            style={{ backgroundColor: "#4ade80" }}
+          />
         </div>
       </div>
-    </>
+
+      {/* Name */}
+      <div className="space-y-3">
+        <h1
+          className="text-4xl md:text-5xl leading-tight"
+          style={{
+            fontFamily: "var(--font-heading)",
+            color: "var(--color-text)",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          <div>
+            <DecryptedText
+              text="Hiren Panchal"
+              speed={100}
+              maxIterations={20}
+              characters="HiReNpAnChAl"
+              animateOn="view"
+              revealDirection="center"
+            />
+          </div>
+        </h1>
+
+        {/* Rotating subtitle */}
+        <div
+          className="flex items-center justify-center gap-3 mb-3"
+          style={{ color: "var(--color-accent)" }}
+        >
+          <Code className="w-5 h-5" />
+          <RotatingText
+            texts={[
+              "Full-Stack Developer",
+              "Backend Developer",
+              "Frontend Developer",
+              "Web Developer",
+            ]}
+            mainClassName="px-2 sm:px-2 md:px-3 text-xl md:text-2xl font-medium overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+            staggerFrom={"last"}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.025}
+            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+            transition={{ type: "spring", damping: 10, stiffness: 100 }}
+            rotationInterval={3000}
+          />
+        </div>
+
+        {/* Tagline */}
+        <p
+          className="text-lg max-w-xl mx-auto"
+          style={{
+            color: "var(--color-text-muted)",
+            lineHeight: 1.7,
+          }}
+        >
+          I build full-stack web apps — from real-time editors to client
+          websites — using React, Node.js, and MongoDB.
+        </p>
+      </div>
+    </section>
   );
 };
 

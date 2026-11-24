@@ -1,13 +1,15 @@
 "use client";
 
-import Hero from "./Compo/Hero";
+import HeroSection from "./Compo/HeroSection";
 
-const page = () => {
+/* ──────────────────────────────────────────────────────────
+   Page — Home entry point (Hero Landing)
+   Clean, editorial, and focused.
+   ────────────────────────────────────────────────────────── */
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black">
-      <Hero />
-    </div>
+    <main className="min-h-screen bg-cream flex flex-col justify-center">
+      <HeroSection />
+    </main>
   );
-};
-
-export default page;
+}
